@@ -40,19 +40,19 @@
 			box-shadow: 0 12px 28px rgba(231,76,60,0.22);
 			border-radius: 50%;
 			top: 50%;
-			transform: translateY(-50%);
+			transform: translate(-50%, -50%);
 			z-index: 1;
 		}
 
 		.blob--left { left: 12%; }
-		.blob--right { left: 88%; transform: translate(-100%, -50%); }
+		.blob--right { left: 88%; }
 	</style>
 </head>
 <body>
 	<div class="stage" aria-hidden="true">
-		<div class="blob blob--left"></div>
+		<div class="blob blob--side blob--left"></div>
 		<div class="blob"></div>
-		<div class="blob blob--right"></div>
+		<div class="blob blob--side blob--right"></div>
 	</div>
 </body>
 </html>
