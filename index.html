@@ -14,17 +14,45 @@
 			-webkit-font-smoothing: antialiased;
 			-moz-osx-font-smoothing: grayscale;
 		}
+		.stage {
+			position: relative;
+			width: 680px;
+			height: 260px;
+		}
+
 		.blob {
+			position: absolute;
+			top: 50%;
+			left: 50%;
 			width: 220px;
 			height: 220px;
 			background: #29a745;
 			border-radius: 50%;
 			box-shadow: 0 18px 40px rgba(41,167,69,0.25);
-			transform: translateZ(0);
+			transform: translate(-50%, -50%);
+			z-index: 2;
 		}
+
+		.blob--side {
+			width: 120px;
+			height: 120px;
+			background: #e74c3c;
+			box-shadow: 0 12px 28px rgba(231,76,60,0.22);
+			border-radius: 50%;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 1;
+		}
+
+		.blob--left { left: 12%; }
+		.blob--right { left: 88%; transform: translate(-100%, -50%); }
 	</style>
 </head>
 <body>
-	<div class="blob" aria-hidden="true"></div>
+	<div class="stage" aria-hidden="true">
+		<div class="blob blob--left"></div>
+		<div class="blob"></div>
+		<div class="blob blob--right"></div>
+	</div>
 </body>
 </html>
